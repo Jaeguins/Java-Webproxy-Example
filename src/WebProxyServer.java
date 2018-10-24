@@ -38,7 +38,7 @@ class SocketHandler{
             }
             String[] lines = data.split("\n");
             String[][] headers = new String[lines.length][];
-            headers[0] = lines[0].substring(0, lines[0].lastIndexOf("HTTP/1.1")).split(" ");
+            headers[0] = lines[0].substring(0, lines[0].lastIndexOf("HTTP/1.0")).split(" ");
             for (int i = 1; i < lines.length; i++) {
                 headers[i] = lines[i].split(": ");
             }
